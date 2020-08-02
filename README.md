@@ -1,4 +1,4 @@
-# Metaclasses, Decoratores, Descriptors, Design Patterns in Python
+# Metaclasses, Decorators, Descriptors and Design Patterns in Python
 
 This project aims at usage of decorators, metaclasses and descriptors for advanced python programming. Different Use cases of design patterns are written such as:
 - Decorators
@@ -40,10 +40,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## References
-[https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Singleton.html](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Singleton.html)
-[https://stackabuse.com/design-patterns-in-python/](https://stackabuse.com/design-patterns-in-python/)       
-[https://stackabuse.com/python-metaclasses-and-metaprogramming/](https://stackabuse.com/design-patterns-in-python/)
-[https://github.com/faif/python-patterns](https://stackabuse.com/design-patterns-in-python/)   
+[https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Singleton.html](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Singleton.html)                             
+[https://stackabuse.com/design-patterns-in-python/](https://stackabuse.com/design-patterns-in-python/)        
+[https://stackabuse.com/python-metaclasses-and-metaprogramming/](https://stackabuse.com/design-patterns-in-python/)        
+[https://github.com/faif/python-patterns](https://stackabuse.com/design-patterns-in-python/)        
 [https://www.youtube.com/watch?v=sPiWg5jSoZI&t=51s](https://www.youtube.com/watch?v=sPiWg5jSoZI&t=51s)
 
 

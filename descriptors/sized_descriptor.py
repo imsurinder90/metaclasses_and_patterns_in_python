@@ -2,7 +2,10 @@
 Using Sized descriptor, use can be restricted to enter
 a string with some limit
 """
-from simple_descriptors import Animal, Descriptor
+try:
+	from simple_descriptors import Animal, Descriptor
+except:
+	from .simple_descriptors import Animal, Descriptor
 
 class Typed(Descriptor):
 	ty = object
@@ -52,8 +55,9 @@ class Cat(Animal):
 	name = PosInteger('name')
 	speak = SizedString('speak', maxlen=4)
 
-cat = Cat(1, "meow")
-print(cat.name)
-cat.speak = "meow"
-# cat.speak = "meow meow" # ValueError: Too big
-print(cat.speak)
+if __name__ == '__main__':
+	cat = Cat(1, "meow")
+	print(cat.name)
+	cat.speak = "meow"
+	# cat.speak = "meow meow" # ValueError: Too big
+	print(cat.speak)

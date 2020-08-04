@@ -4,7 +4,10 @@ rules on a field for a user.
 For example: age = Int("age") It will restricts
 user from entering any value other than integer type.
 """
-from simple_descriptors import Animal
+try:
+	from simple_descriptors import Animal
+except:
+	from .simple_descriptors import Animal
 
 class Descriptor:
 	"""

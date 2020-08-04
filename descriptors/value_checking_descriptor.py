@@ -5,7 +5,10 @@ for type of value defined by User. If a user has
 entered string value for Integer type, It will raise
 a TypeError.
 """
-from simple_descriptors import Animal
+try:
+	from simple_descriptors import Animal
+except:
+	from .simple_descriptors import Animal
 
 class Descriptor:
 	"""
@@ -55,8 +58,9 @@ class Cat(Animal):
 	name = PosInteger('name')
 	speak = String('speak')
 
-# cat = Cat(-1, "meow") # ValueError: Expected value > 0
-cat = Cat(1, "meow")
-print(cat.name)
-cat.speak = "meow meow"
-print(cat.speak)
+if __name__ == '__main__':
+	# cat = Cat(-1, "meow") # ValueError: Expected value > 0
+	cat = Cat(1, "meow")
+	print(cat.name)
+	cat.speak = "meow meow"
+	print(cat.speak)

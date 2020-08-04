@@ -4,7 +4,10 @@ will restrict user for entering any string other than
 the one matches with regex string.
 """
 import re
-from simple_descriptors import Animal, Descriptor
+try:
+	from simple_descriptors import Animal, Descriptor
+except:
+	from .simple_descriptors import Animal, Descriptor
 
 class Typed(Descriptor):
 	ty = object
@@ -68,7 +71,8 @@ class Cat(Animal):
 	name = PosInteger('name')
 	speak = SizedRegexString('speak', maxlen=4, pat="[A-Z]+$")
 
-cat = Cat(1, "MEOW")
-print(cat.name)
-# cat.speak = "meow" # ValueError: Invalid String
-print(cat.speak)
+if __name__ == '__main__':
+	cat = Cat(1, "MEOW")
+	print(cat.name)
+	# cat.speak = "meow" # ValueError: Invalid String
+	print(cat.speak)

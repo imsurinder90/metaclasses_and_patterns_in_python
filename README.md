@@ -34,6 +34,13 @@ Ran 2 tests in 0.001s
 OK
 ```
 
+## Run All Unit Test cases at once
+
+```python
+>>> python -m testtest discover
+
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

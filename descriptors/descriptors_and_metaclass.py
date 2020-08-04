@@ -16,7 +16,10 @@ class Cat(Animal):
 
 import re
 from collections import OrderedDict
-from simple_descriptors import make_signature, Descriptor
+try:
+	from simple_descriptors import make_signature, Descriptor
+except:
+	from .simple_descriptors import make_signature, Descriptor
 
 class AnimalMeta(type):
 	@classmethod
@@ -107,11 +110,12 @@ class Cat(Animal):
 
 def test(a, b=10):
 	pass
-# if __name__ == '__main__':
-cat = Cat(1, "MEOW")
-print(cat.name)
-# cat.speak = "meow" # ValueError: Invalid String
-print(cat.speak)
+
+if __name__ == '__main__':
+	cat = Cat(1, "MEOW")
+	print(cat.name)
+	# cat.speak = "meow" # ValueError: Invalid String
+	print(cat.speak)
 
 # import sys
 # print(sys.modules['simple_descriptors'])
@@ -122,21 +126,21 @@ print(cat.speak)
 # print(re.__file__) # C:\Program Files\Python38-32\lib\re.py
 # print(Cat.__doc__) # print documentation of module defined at top
 # print(help(type))
-class Spice(object):
+# class Spice(object):
 
-	def __getattribute__(self, name):
-		print("Value of variable %s" % (name))
-		return super().__getattribute__(name)
+# 	def __getattribute__(self, name):
+# 		print("Value of variable %s" % (name))
+# 		return super().__getattribute__(name)
 
-	def __setattr__(self, name, value):
-		print("Setting attribute value {%s: %s}" % (name, value))
-		super().__setattr__(name, value)
+# 	def __setattr__(self, name, value):
+# 		print("Setting attribute value {%s: %s}" % (name, value))
+# 		super().__setattr__(name, value)
 
-	def __repr__(self):
-		return "called from class: %s" % self.__class__.__name__
+# 	def __repr__(self):
+# 		return "called from class: %s" % self.__class__.__name__
 
-sp = Spice()
-sp.a = 10
-print(sp.a)
-print(sp)
+# sp = Spice()
+# sp.a = 10
+# print(sp.a)
+# print(sp)
 # print(help(type))

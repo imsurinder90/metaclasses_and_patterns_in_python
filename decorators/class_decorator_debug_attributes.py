@@ -41,9 +41,10 @@ class FooBar:
 	def static_method_foo():
 		pass
 
-foobar = FooBar(3, 7)
-foobar.a
-foobar.bar(33, 34)
-foobar.class_method_foo()
-foobar.static_method_foo()
-FooBar._temp
+if __name__ == "__main__":
+	foobar = FooBar(3, 7)
+	foobar.a
+	foobar.bar(33, 34)
+	foobar.class_method_foo()
+	foobar.static_method_foo()
+	FooBar._temp
